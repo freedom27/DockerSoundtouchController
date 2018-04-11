@@ -13,4 +13,5 @@ To run it on a Raspberry Pi do the following:
 To build the container use `docker build -t soundtouch_controller:latest .`
 
 ### Launch:
-To launch the conatiner automatically at startup unless explicitly stopped use `docker run --name soundtouch_controller -p 5000:5000 --restart unless-stopped soundtouch_controller:latest`
+* To launch the container without a restart policy (stops in case of crash or reboot) use: `docker run -d -p 5000:5000 soundtouch_controller`
+* To launch the conatiner automatically at startup unless explicitly stopped use: `docker run --name soundtouch_controller -d -p 5000:5000 --restart unless-stopped soundtouch_controller:latest`
